@@ -1,0 +1,53 @@
+[33mcommit 2ac887d8f9acf1f6f3c93f6cf4c649582c9c25f7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 14:58:21 2024 +0000
+
+    Add hyperparameter tuning
+
+[33mcommit 8d4b348f252352c00c5ccdea90127ea623923247[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 13:11:08 2024 +0000
+
+    Add image augmentation and save class_indicies
+
+[33mcommit bfe01316ade1b5d09a40ba398ae1542f63a02e83[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 12:55:14 2024 +0000
+
+    Add data distribution across labels and sets
+
+[33mcommit 2c23d77eb2f5865971fddc58ffe3c3a5fb749214[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 11:43:28 2024 +0000
+
+    Add image montages for both labels
+
+[33mcommit bb866af42bae50c57dee26751e5703e4de85c5b5[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 11:24:18 2024 +0000
+
+    Add difference between average image in each label
+
+[33mcommit 8e5dc0a6b74e885846b592d6f07851b87e9eb491[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 10:54:50 2024 +0000
+
+    Add plot and save mean variability of images
+
+[33mcommit 1e672f7534a2b700ee26811c6fb9ea2504008e5a[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 10:15:36 2024 +0000
+
+    Add image shape and save as .pkl file
+
+[33mcommit 8643f48304115b152bdbe6f5cffc71b2e39f2a1a[m
+Author: TobiS S <tobi.schmauder@outlook.com>
+Date:   Sun Apr 21 09:32:04 2024 +0000
+
+    Add notebook 1 for data collection and preparation
+
+[33mcommit 887e97def04827eed54afc2252bf4ae964b273d5[m
+Author: TobiS <130932230+NixTS@users.noreply.github.com>
+Date:   Sun Apr 21 09:46:50 2024 +0200
+
+    Initial commit
