@@ -2,10 +2,10 @@ numpy
 pandas
 matplotlib
 seaborn
-plotly
+# plotly
 
 streamlit
 
-scikit-learn
-tensorflow-cpu
-keras
+# scikit-learn
+# tensorflow-cpu
+# keras
