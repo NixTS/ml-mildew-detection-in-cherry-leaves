@@ -82,3 +82,6 @@ The infected leaves show more white stripes in the center and and appear less di
 The most obvious pattern where we could differentiate the average images from one another is the center part.
 
 [Back to top ⇧](#table-of-contents)
+
+## **The ML Model**
+
