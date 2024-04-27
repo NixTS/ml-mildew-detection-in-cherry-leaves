@@ -2,7 +2,8 @@ numpy
 pandas
 matplotlib
 seaborn
-# plotly
+plotly
+joblib
 
 streamlit
 
