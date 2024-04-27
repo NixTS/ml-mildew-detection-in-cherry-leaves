@@ -8,5 +8,5 @@ joblib
 streamlit
 
 # scikit-learn
-# tensorflow-cpu
+tensorflow-cpu
 # keras
