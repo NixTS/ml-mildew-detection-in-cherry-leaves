@@ -85,3 +85,247 @@ The most obvious pattern where we could differentiate the average images from on
 
 ## **The ML Model**
 
+The ML model is a convolutional neural network (CNN) build with keras, a neural network API. This model is designed for a binary classification task.
+
+### The Models Architecture
+
+1. Sequential Model
+    +  Sequential in a machine learning context with frameworks like TensorFlow or Keras refers to a linear stack of layers. It indicates that layers are added one after another. 
+
+2. Input Layer (1x)
+    + The initial layer of a neural network that receives the input data and passes it onto the next subsequent layer for processing. It serves as an entry point for data.
+
+3. Convolutional Layer (3x)
+    + The core operations of a convolutional layer is the convolution operation, which involves applying a filter (also knows as a kernel) to the input image. This filter moves across the input image, computing the dot product and the input pixels. This results in a feature map which highlights certain patterns in the input image.
+    
+4. Fully Connected Layer (1x)   
+    + Also known as *Dense Layer* is a type of neural network layer where each neuron in the layer is connected to every neuron in the preceding layer. 
+
+5. Output Layer (1x)
+    + The output is the final layer in a neural network. Its primary function is to produce the output for a given input after the data was processed through the preceding layers
+    
+### The Models Hyperparameters
+
+1. Conv2D
+    + Conv2D stands for *2D Convolutional Layer*.
+    + It is used to process 2-dimensional data such as images.
+    + The layer performs convolutional operations by applying a filter to the image, extracting features from the image.
+    + Parameters:
+        + filters: number of filters to apply
+        + Kernel_size: size of the filter, typically as a tuple (height, width)
+        + activation: function applied to the output of the layer
+
+2. MaxPooling2D
+    + MaxPooling2d is a downsampling operation used in convolutional neural networks to reduce the spatial dimensions of the feature maps while saving the most important information.
+    + It divides the input feature into non-overlapping rectangular regions and outputs the maximum value within each region.
+    + It helps in reducing complexity and overfitting by reducing the number of parameters in the neural network.
+
+3. Flatten
+    + The Flatten Layer works as a connector between the convolutional layers and the fully connected layer.
+    + It transforms multi-dimensional output into an one-dimensional array.
+    + This is necessary because fully connected layers require their input to be one-dimensional.
+
+4. Dropout
+    + The Dropout Layer is a regulation technique used to prevent overfitting by randomly dropping out a proportion of input neurons during training.
+    + Dropping out neurons during training intoduces noise and helps to prevent overfitting.
+
+5. Activation
+    + Activation function are mathematical operations applied to the output of each neuron.
+    + They introduce non-linearity into the network, therefore enabling to learn complex patterns in the data.
+    + ReLU Activation
+        + ReLU is a simple thresholding operation to the input.
+        + Any input less than zero is set to zero.
+        + Any positive input remains unchanged.
+    + Sigmoid Activation
+        + Sigmoid is a commonly used activation function for binary classifications.
+        + The function takes any valued number and squashed it into the range from 0 to 1.
+        + If the data is positive it is classifies as 1, if negative as 0.
+
+6. Optimizer
+    + An optimizer in machine learning is an algorithm used to adjust the parameters of a model.
+    + The goal of optimization is to find the set of parameters that result in the best performance.
+    + Adam optimizer
+        + The Adam optimizer combines momentum and adaptive learning rates to improve speed and robustness during training.
+
+### The Model Training
+
+For the model training, an *EarlyStopping* callback was implemented. That means, that the training of the model would automatically stop, when a specifies metric stops improving. The monitored metric was *val_accuracy* with the *patience* ste to *3*.
+
+#### **Version v1**
+
+<details>
+<summary>This is the model used for version 1</summary>
+
+    model = Sequential()
+
+    # Input Layer
+    model.add(Conv2D(filters=4,
+                     kernel_size=(3, 3),
+                     input_shape=image_shape,
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    # Convolutional Layers
+    model.add(Conv2D(filters=8,
+                     kernel_size=(3, 3),
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Conv2D(filters=16,
+                     kernel_size=(3, 3),
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Flatten())
+
+    # Fully Connected Layer
+    model.add(Dense(16, activation='relu'))
+
+    model.add(Dropout(0.2))
+
+    # Output Layer
+    model.add(Dense(1, activation='sigmoid'))
+
+    model.compile(loss='binary_crossentropy',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+
+    return model
+
+</details>
+
+<details>
+<summary>These are the results from model training v1</summary>
+
+![model v1 accuracy line diagram](readme_images/v1_model_accuracy_training.png)
+![model v1 loss line diagram](readme_images/v1_model_loss_training.png)
+![model v1 accuracy line diagram](readme_images/v1_confusion_matrix.png)
+
+</details>
+
+#### **Version v2**
+
+<details>
+<summary>This is the model used for version 2</summary>
+
+    model = Sequential()
+
+    # Input Layer
+    model.add(Conv2D(filters=8,
+                     kernel_size=(3, 3),
+                     input_shape=image_shape,
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    # Convolutional Layers
+    model.add(Conv2D(filters=16,
+                     kernel_size=(3, 3),
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Conv2D(filters=32,
+                     kernel_size=(3, 3),
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Flatten())
+
+    # Fully Connected Layer
+    model.add(Dense(32, activation='relu'))
+
+    model.add(Dropout(0.2))
+
+    # Output Layer
+    model.add(Dense(1, activation='sigmoid'))
+
+    model.compile(loss='binary_crossentropy',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+
+    return model
+
+</details>
+
+<details>
+<summary>These are the results from model training v2</summary>
+
+![model v2 accuracy line diagram](readme_images/v2_model_accuracy_training.png)
+![model v2 loss line diagram](readme_images/v2_model_loss_training.png)
+![model v2 accuracy line diagram](readme_images/v2_confusion_matrix.png)
+
+</details>
+
+#### **Version v3**
+
+<details>
+<summary>This is the model used for version 3</summary>
+
+    model = Sequential()
+
+    # Input Layer
+    model.add(Conv2D(filters=16,
+                     kernel_size=(3, 3),
+                     input_shape=image_shape,
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    # Convolutional Layers
+    model.add(Conv2D(filters=32,
+                     kernel_size=(3, 3),
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Conv2D(filters=64,
+                     kernel_size=(3, 3),
+                     activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Flatten())
+
+    # Fully Connected Layer
+    model.add(Dense(64, activation='relu'))
+
+    model.add(Dropout(0.2))
+
+    # Output Layer
+    model.add(Dense(1, activation='sigmoid'))
+
+    model.compile(loss='binary_crossentropy',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+
+    return model
+
+</details>
+
+<details>
+<summary>These are the results from model training v3</summary>
+
+![model v3 accuracy line diagram](readme_images/v3_model_accuracy_training.png)
+![model v3 loss line diagram](readme_images/v3_model_loss_training.png)
+![model v3 accuracy line diagram](readme_images/v3_confusion_matrix.png)
+
+</details>
+
+### **Model Training Conclusion**
+
+In machine learning and convolutional networks, there is no one-size-fits-all approach. Optimal parameter selection often involves a process of trial and error.
+
+**Version 1**
+
+Starting out with version 1, a relatively *small* model was chosen to test the waters. Version 1 surprised with a relatively stable and reliable training. The accuracy metric initially started very high an continued to improve steadily. As the loss started at around 0.4 but also continued to improve to lower values. 
+It was decided to double the filter size for the next version.
+
+**Version 2**
+
+Version 2 showed stronger accuracy and loss metrics than version 1. But when evaluation the result with a confusion matrix it showed a larg than expected FN value in predicted powdery mildew. It was decided to increase the filter size once again as well as the Dense layer size.
+
+**Version 3**
+
+Version 3 showed the highest accuracy and lowest loss values from all versions. The confusion matrix had notably high TP and TN values, which indicates very promising outcome. 
+
+While the crossing of the val_accuracy and accuracy lines suggested potential instability and overfitting in the model, the magnitude of this effect was deemed relatively insignificant in the context of the overall model performance.
+
+It was decided to use this model version for further evaluation and testing on real and unfamiliar data.
+
+[Back to top ⇧](#table-of-contents)

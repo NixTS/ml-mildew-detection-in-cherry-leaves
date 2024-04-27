@@ -1,6 +1,8 @@
 input/cherry-leaves/train/*
 input/cherry-leaves/test/*
 jupyter_notebooks/*
+outputs/v1/*
+outputs/v2/*
 app_pages/__pycache__/*
 .gitpod.dockerfile
 README.md
