@@ -594,3 +594,29 @@ Dependencies for these librabies are usually installed automatically.
 
 + [Keras](https://www.keras.io/)
     + Deep learning module
+
+[Back to top ⇧](#table-of-contents)
+
+## **Credits**
+
+**Issues**
+
+Starting out I initially planned another project and got to work on it for around two weeks. But, by not adhering to good practice and reading through the project description as careful as one should I completly wrecked the repository by commiting large sets of data multiple times, which could not be pushed to github. My first response was to use git large file storage, but it was already too late. Along with other issues i had, deemed my project a failure. 
+
+This is my first [first Projects](https://github.com/NixTS/ml-brain-tumor-detection) repository.
+
+Around one week before the deadline i decided to scrap the project and start a new project. Luckily i was able to use alot from my old code. Doing this right the second time, i learned alot about machine learning in general and that i must be better prepared for these kinds of projects.
+
+Although failing a project and deciding to start fresh feels bad in the first place, but in the end, it was the right decision.
+
+**Content**
+
++ The Leaves dataset used in this project was linked from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) provided by [Code Institute](https://codeinstitute.net/global)
++ Additional informations about Powdery Mildew can be found at the [Washington State University Tree Fruit Compendium](https://treefruit.wsu.edu/crop-protection/disease-management/cherry-powdery-mildew/#:~:text=Powdery%20mildew%20of%20sweet%20and,1)
+
+**Code**
+
++ The code was written by [Tobi S. aka NixTS](https://github.com/NixTS)
++ The [Template](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) used for this project belongs to [Code Institute](https://codeinstitute.net/global)
++ The Streamlit Dashboard and code structure inspiration stems from the [Code Institutes Walkthrough Project 01 - Malaria Detector](https://github.com/NixTS/WalkthroughProject01)
+
