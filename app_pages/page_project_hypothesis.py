@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def page_project_hypothesis_body():
-    st.write("### Project Hypotesis 1 and Validation")
+    st.write("### Project Hypotesis and Validation")
 
     st.info(
         f"Infected leaves are visually different from healthy ones."

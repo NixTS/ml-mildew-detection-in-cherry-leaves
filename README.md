@@ -364,7 +364,7 @@ For better understanding and effective implementation of the buisness requiremen
 + As the client I want to easily navigate an interactive dashboard so that I can seemlessly work with my data.
 
 **Fulfillment**
-+ An interactive streamlit dashboard was created and released on a web-based platform. (#dashboard-design)
++ An interactive streamlit dashboard was created and released on a web-based platform. [Dashboard Design](#dashboard-design)
 
 ### **Business Requirement 4**
 > The client wants a minimum prediction accuracy of 97%.
@@ -376,5 +376,80 @@ For better understanding and effective implementation of the buisness requiremen
 + The model reached an accuracy of 99.76%
 
 ![accuracy and loss metric](readme_images/acc_loss_metric.png)
+
+[Back to top ⇧](#table-of-contents)
+
+## **Dashboard Design**
+
+### Sidebar
+
+A visible sidebar is present on the entire page, providing convenient navigation. Is part of business requirement 3.
+
+<details>
+<summary>Click Me to see the Sidebar</summary>
+
+![screenshot of sidebar](readme_images/page_sidebar.png)
+
+</details>
+
+### Page 1 - Project Summary
+
+The front page offers a summary of the project's business premise and general information.
+
+<details>
+<summary>Click Me to see the Project Summary Page</summary>
+
+![screenshot of sidebar](readme_images/page_quick_project_summary.png)
+
+</details>
+
+### Page 2 - Leaves Visualizer
+
+Completing the first business requirement, this page provides visualizations of mean and standard deviation, along with image montages showcasing both healthy and powdery mildew infected images.
+
+<details>
+<summary>Click Me to see the Leaves Visualizer Page</summary>
+
+![screenshot of sidebar](readme_images/page_cherry_leaves_visualizer_1.png)
+![screenshot of sidebar](readme_images/page_cherry_leaves_visualizer_2.png)
+![screenshot of sidebar](readme_images/page_cherry_leaves_visualizer_3.png)
+![screenshot of sidebar](readme_images/page_cherry_leaves_visualizer_4.png)
+
+</details>
+
+### Page 3 - Powdery Mildew Detector
+
+Using an uploader widget, the client can upload a picture of a cherry leaf. The ML model will then detect if the leaf is infact infected with the powdery mildew fungus or healthy. Along with a bar plot, a report with the results can be downloaded. Awnsering business requirement 2.
+
+<details>
+<summary>Click Me to see the Powdery Mildew Detector Page</summary>
+
+![screenshot of sidebar](readme_images/page_powdery_mildew_detector_1.png)
+![screenshot of sidebar](readme_images/page_powdery_mildew_detector_2.png)
+
+</details>
+
+### Page 4 - Project Hypothesis
+
+Displayed here is the projects hypothesis.
+
+<details>
+<summary>Click Me to see the Project Hypothesis Page</summary>
+
+![screenshot of sidebar](readme_images/page_project_hypothesis.png)
+
+</details>
+
+### Page 5 - ML Performance Metrics
+
+In alignment with the client's requirements, as outlined in business requirement 4, this page includes performance metrics for the machine learning models. These metrics encompass dataset size, label frequencies, accuracy, and loss, supplemented by a confusion matrix showing the model's success.
+
+<details>
+<summary>Click Me to see the ML Performance Metrics Page</summary>
+
+![screenshot of sidebar](readme_images/page_ml_performance_1.png)
+![screenshot of sidebar](readme_images/page_ml_performance_2.png)
+
+</details>  
 
 [Back to top ⇧](#table-of-contents)
