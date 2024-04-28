@@ -453,3 +453,38 @@ In alignment with the client's requirements, as outlined in business requirement
 </details>  
 
 [Back to top ⇧](#table-of-contents)
+
+## **Bugs and Errors**
+
+### ***Unfixed* Warning during production**
+
+Warning during model training:
+
+```
+UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored. self._warn_if_super_not_called()
+```
+
+Although it's generally not advisable to disregard or suppress warnings, in this instance, the warning message suggests that certain arguments passed to the fit() method will be ignored. To mitigate this warning, a small code was implemented to suppress it:
+
+```
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
+```
+
+### **Unfixed Bugs an Errors**
+
+In some cases the prediction of the Pwodery Mildew Detector turns out to be false. This could be due to various reasons:
+
++ Images with substantial background noise or poor focus may lead to inaccuracies in detection.
++ Reflections of light on the leaf's surface may be mistakenly identified as powdery mildew infection.
+
+Potential fixes could be:
++ Implementing a function to isolate the leaf and maintain a uniform background color, reducing background noise.
++ Adjusting the contrast of images to enhance the visibility of features relevant to detection, thereby minimizing false positives. 
+
+Example:
+![false detection of a cherry leaf](readme_images/false_negative_cherry_leaf_detection.png)
+
+[Back to top ⇧](#table-of-contents)
