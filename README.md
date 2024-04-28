@@ -488,3 +488,56 @@ Example:
 ![false detection of a cherry leaf](readme_images/false_negative_cherry_leaf_detection.png)
 
 [Back to top ⇧](#table-of-contents)
+
+## **Deployment**
+
+### **Getting started**
+
+The project was started by navigating to the [template](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) provided and clicking 'Use this template'. Under Repository name I input "ml-mildew-detection-in-cherry-leaves" and checked the 'Include all branches' checkbox.
+
+I am using [GitPod](https://www.gitpod.io/), and i am logged in with my "GitHub" credentials. After logging in, i navigated to the *Dashboard*, under *Workspaces* i selected *New Workspace*. I type in the repositories name and select *ml-mildew-detection-in-cherry-leaves* from the dropdown menu. In the second dropdown menu i select *VS Code ... Editor - Browser* to start the VS Code editor in my browser. After pressing *Continue* the workspace loads up and starts VS Code as expected. 
+
+The following command were used in the terminal to ensure version control:
+
++ **git add filename** - This command was used to add files to the staging area before committing.
++ **git commit -m "commit message explaining the updates"** - This command was used to commit changes to the local repository.
++ **git reset HEAD^** - This command was used to delete the last commit but keep all the changes.
++ **git push** - This command is used to push all committed changes to the GitHub repository.
+
+### **Forking the Repository**
+
+By forking this repository, a copy of the repository is created in your GitHub account to view or make changes without affecting the original repository. For forking the repository follow these steps:
+
+1. Locate the [Repository on GitHub](https://github.com/NixTS/ml-mildew-detection-in-cherry-leaves)
+2. On the top right, click "Fork" and decide where to fork the repository.
+3. The forked repository is now in your GitHub account and ready to view/change.
+
+### **Making a local clone**
+
+Cloning a repository creates a copy of the repository on your local machine. For cloning a repository follow these steps:
+
+1. Locate the [Repository on GitHub](https://github.com/NixTS/ml-mildew-detection-in-cherry-leaves) and click the *Code* button on the top right.
+2. Chose one of the available options: Clone with HTTPS, Open with Git Hub desktop, Download ZIP.
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open your CLI application and chose the location where the repository should be located
+5. Now type in
+    ```
+    > $ git clone https://github.com/NixTS/ml-mildew-detection-in-cherry-leaves.git
+    ```
+6. Press enter and wait for the repository to be cloned.
+
+### **Creating the Heroku APP**
+
++ The App live link is: https://ml-powdery-mildew-detector-d12411e2b28f.herokuapp.com/
++ Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
++ The project was deployed to Heroku using the following steps:
+
+1. Log in to Heroku and create an App
+2. At the Deploy tab, select GitHub as the deployment method.
+3. Select your repository name and click Search. Once it is found, click Connect.
+4. Select the branch you want to deploy, then click Deploy Branch.
+5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button.
+6. Open App on the top of the page to access your App.
+7. If the slug size is too large, then add large files not required for the app to the .slugignore file.
+
+[Back to top ⇧](#table-of-contents)
