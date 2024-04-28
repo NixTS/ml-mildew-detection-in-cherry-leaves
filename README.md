@@ -541,3 +541,56 @@ Cloning a repository creates a copy of the repository on your local machine. For
 7. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
 [Back to top ⇧](#table-of-contents)
+
+## **Technologies**
+
+### **Language**
++ [Python](https://www.python.org/)
+    + The programming language used in this project
+
+### **Platforms**
++ [GitHub](https://github.com/)
+    + Repository and version control
+
++ [Heroku](https://www.heroku.com/)
+    + Project Deployment
+
++ [Kaggle](https://www.kaggle.com/) 
+    + Provided datasets for this project
+
++ [Gitpod](https://www.gitpod.io/)
+    + Along with the VS Code implementation in the browser was used to write the code
+
+### **Libraries**
+
+Dependencies for these librabies are usually installed automatically.
+
++ [NumPy](https://www.numpy.org/)
+    + Image processing via conversion to NumPy arrays
+
++ [Pandas](https://www.pandas.pydata.org/)
+    + Conversion of numerical data into dataframes
+
++ [Matplotlib](https://www.matplotlib.org/)
+    + Plotting graphs
+
++ [Seaborn](https://www.seaborn.pydata.org/)
+    + Presentations and visualization of data (confusion matrix heatmap, ...)
+
++ [Plotly](https://www.plotly.com/python/)
+    + Visualization data in graphs
+
++ [Joblib](https://www.joblib.readthedocs.io/en/stable/)
+    + Processing python function as a pipeline
+
++ [Streamlit](https://www.streamlit.io/)
+    + Dashboard creation for data presentation
+
++ [Scikit-learn](https://www.scikit-learn.org/)
+    + Machine learning tool for python
+
++ [TensorFlow](https://www.tensorflow.org/versions/r2.6/api_docs/python/tf)
+    + Machine learning library for building the model
+
++ [Keras](https://www.keras.io/)
+    + Deep learning module
