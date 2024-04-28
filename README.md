@@ -33,8 +33,8 @@ The primary objective of this project is to develop a machine learning model for
 
 Summary:
 + The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
-+ The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
-+ The client needs a dashboard.
++ The client is interested in predicting if a cherry leaf is healthy or infected with powdery mildew.
++ The client wants a dashboard.
 + The client wants a minimum prediction accuracy of 97%.
 
 
@@ -149,7 +149,7 @@ The ML model is a convolutional neural network (CNN) build with keras, a neural 
 
 ### The Model Training
 
-For the model training, an *EarlyStopping* callback was implemented. That means, that the training of the model would automatically stop, when a specifies metric stops improving. The monitored metric was *val_accuracy* with the *patience* ste to *3*.
+For the model training, an *EarlyStopping* callback was implemented. That means, that the training of the model would automatically stop, when a specifies metric stops improving. The monitored metric was *val_accuracy* with the *patience* set to *3*.
 
 #### **Version v1**
 
@@ -495,7 +495,7 @@ Example:
 
 The project was started by navigating to the [template](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) provided and clicking 'Use this template'. Under Repository name I input "ml-mildew-detection-in-cherry-leaves" and checked the 'Include all branches' checkbox.
 
-I am using [GitPod](https://www.gitpod.io/), and i am logged in with my "GitHub" credentials. After logging in, i navigated to the *Dashboard*, under *Workspaces* i selected *New Workspace*. I type in the repositories name and select *ml-mildew-detection-in-cherry-leaves* from the dropdown menu. In the second dropdown menu i select *VS Code ... Editor - Browser* to start the VS Code editor in my browser. After pressing *Continue* the workspace loads up and starts VS Code as expected. 
+I am using [GitPod](https://www.gitpod.io/), and i am logged in with my "GitHub" credentials. After logging in, i navigated to the *Dashboard*, under *Workspaces* i selected *New Workspace*. I type in the repositories name and select *ml-mildew-detection-in-cherry-leaves* from the dropdown menu. In the second dropdown menu i select *VS Code ... Editor - Browser* to start the VS Code editor in my browser. After pressing *Continue* the workspace loads up and starts VS Code in my browser as expected. 
 
 The following command were used in the terminal to ensure version control:
 
@@ -568,19 +568,19 @@ Dependencies for these librabies are usually installed automatically.
 + [NumPy](https://www.numpy.org/)
     + Image processing via conversion to NumPy arrays
 
-+ [Pandas](https://www.pandas.pydata.org/)
++ [Pandas](https://pandas.pydata.org/)
     + Conversion of numerical data into dataframes
 
 + [Matplotlib](https://www.matplotlib.org/)
     + Plotting graphs
 
-+ [Seaborn](https://www.seaborn.pydata.org/)
++ [Seaborn](https://seaborn.pydata.org/)
     + Presentations and visualization of data (confusion matrix heatmap, ...)
 
 + [Plotly](https://www.plotly.com/python/)
     + Visualization data in graphs
 
-+ [Joblib](https://www.joblib.readthedocs.io/en/stable/)
++ [Joblib](https://joblib.readthedocs.io/en/stable/)
     + Processing python function as a pipeline
 
 + [Streamlit](https://www.streamlit.io/)
@@ -592,7 +592,7 @@ Dependencies for these librabies are usually installed automatically.
 + [TensorFlow](https://www.tensorflow.org/versions/r2.6/api_docs/python/tf)
     + Machine learning library for building the model
 
-+ [Keras](https://www.keras.io/)
++ [Keras](https://keras.io/)
     + Deep learning module
 
 [Back to top ⇧](#table-of-contents)
@@ -601,7 +601,7 @@ Dependencies for these librabies are usually installed automatically.
 
 **Issues**
 
-Starting out I initially planned another project and got to work on it for around two weeks. But, by not adhering to good practice and reading through the project description as careful as one should I completly wrecked the repository by commiting large sets of data multiple times, which could not be pushed to github. My first response was to use git large file storage, but it was already too late. Along with other issues i had, deemed my project a failure. 
+Starting out I initially planned another project and got to work on it for around two weeks. But, by not adhering to good practice and reading through the project description as careful as one should, I completly wrecked the repository by commiting large sets of data multiple times, which could not be pushed to github. My first response was to use git large file storage, but it was already too late. Along with many other issues i had, deemed my project a failure. 
 
 This is my first [first Projects](https://github.com/NixTS/ml-brain-tumor-detection) repository.
 
@@ -620,3 +620,4 @@ Although failing a project and deciding to start fresh feels bad in the first pl
 + The [Template](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves) used for this project belongs to [Code Institute](https://codeinstitute.net/global)
 + The Streamlit Dashboard and code structure inspiration stems from the [Code Institutes Walkthrough Project 01 - Malaria Detector](https://github.com/NixTS/WalkthroughProject01)
 
+[Back to top ⇧](#table-of-contents)
