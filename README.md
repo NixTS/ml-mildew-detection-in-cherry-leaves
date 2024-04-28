@@ -329,3 +329,52 @@ While the crossing of the val_accuracy and accuracy lines suggested potential in
 It was decided to use this model version for further evaluation and testing on real and unfamiliar data.
 
 [Back to top ⇧](#table-of-contents)
+
+## **Implementation of the Business Requirements**
+
+For better understanding and effective implementation of the buisness requirements, they were split into smaller user stories.
+
+### **Business Requirement 1**
+> The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+
+**User Story**
++ As the client I want to display the difference between a healthy and a powdery mildew infected leaf. 
++ As the client I want to display the mean and standard deviation images for healthy and powdery mildew infected cherry leaves.
+
+**Fulfillment**
++ An image montage for healthy and infected leaves was implemented in the dashboard.
++ Mean and standard deviation images for both healthy and powdery mildew infected leaves was implemented in the dashboard.
++ The difference between average healthy and average infected leaves was implemented in the dashboard. 
+
+### **Business Requirement 2**
+> The client is interested in predicting if a cherry leaf is healthy or is infected with powdery mildew.
+
+**User Story**
++ As the client I want a machine learning model to predict whether a leaf is healthy or infected with powdery mildew.
+
+**Fulfillment**
++ The client can upload a picture of a cherry leaf to the dashboard to instantly get an evaluation.
++ The client can upload multiple pictured at once, up to 200mb.
++ The client can download a Report for the prediction.
+
+### **Business Requirement 3**
+> The client needs a dashboard.
+
+**User Story**
++ As the client I want to easily navigate an interactive dashboard so that I can seemlessly work with my data.
+
+**Fulfillment**
++ An interactive streamlit dashboard was created and released on a web-based platform. (#dashboard-design)
+
+### **Business Requirement 4**
+> The client wants a minimum prediction accuracy of 97%.
+
+**User Story**
++ As the client I want the machine learning model to be as accurate as possible!
+
+**Fulfillment**
++ The model reached an accuracy of 99.76%
+
+![accuracy and loss metric](readme_images/acc_loss_metric.png)
+
+[Back to top ⇧](#table-of-contents)
