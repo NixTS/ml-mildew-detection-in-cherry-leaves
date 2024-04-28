@@ -13,11 +13,12 @@ The business goal of this project is to detect a biothrophic fungus infection ca
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [The ML Model](#the-ml-model)
 5. [Implementation of the Business Requirements](#implementation-of-the-business-requirements)
-6. [Dashboard Design](#dashboard-design)
-7. [Bugs and Errors](#bugs-and-errors)
-8. [Deployment](#deployment)
-9. [Technologies](#technologies)
-10. [Credits](#credits)
+6. [ML Business Case](#ml-business-case)
+7. [Dashboard Design](#dashboard-design)
+8. [Bugs and Errors](#bugs-and-errors)
+9. [Deployment](#deployment)
+10. [Technologies](#technologies)
+11. [Credits](#credits)
 
 ## **Dataset Contents**
 
@@ -376,6 +377,19 @@ For better understanding and effective implementation of the buisness requiremen
 + The model reached an accuracy of 99.76%
 
 ![accuracy and loss metric](readme_images/acc_loss_metric.png)
+
+[Back to top ⇧](#table-of-contents)
+
+## **ML Business Case**
+
+**Powdery Mildew Detector**
+
++ The client's primary focus lies in accurately determining whether a given image of a cherry leaf is infected with powdery mildew or healthy. This task inherently signifies a binary classification machine learning objective.
++ The aim of this machine learning task is to provide a dependable detector for detecting powdery mildew in cherry leaves through a simple photograph.
++ This TensorFlow model will employ a convolutional network that identifies certain patterns in image data from cherry leaves. It utilizes convolutional and max pooling layers to achieve this.
++ The models output will be a classification label, wether a cherry leaf is infected or not.
++ Upon generating the outcome, the following heuristic will be applied. If a leaf is flagged as powdery mildew infected, the whole tree will be treated with a fungicide as well as the neighboring tree's will undergo preventive tratment as a precautionary measure.
++ Given that cherries represent the client's flagship product, the accuracy in detecting powdery mildew in cherry leaves must be 97% or higher. Additionally, the occurrence of false positives and false negatives in output should be minimized to near-zero levels to uphold product quality and consumer trust.
 
 [Back to top ⇧](#table-of-contents)
 
